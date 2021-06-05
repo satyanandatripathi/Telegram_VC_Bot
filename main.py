@@ -27,12 +27,12 @@ from misc import HELP_TEXT, REPO_TEXT
 running = False  # Tells if the queue is running or not
 
 
-@app.on_message(filters.command("help") & ~filters.private)
+@app.on_message(filters.command("vchelp") & ~filters.private)
 async def help(_, message):
     await message.reply_text(HELP_TEXT, quote=False)
 
 
-@app.on_message(filters.command("repo") & ~filters.private)
+@app.on_message(filters.command("vcrepo") & ~filters.private)
 async def repo(_, message):
     await message.reply_text(REPO_TEXT, quote=False)
 
